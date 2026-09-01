@@ -8,7 +8,7 @@ Builds an Azure Portal dashboard (`azurerm_portal_dashboard`) from a list of pre
 ## Usage
 
 Each tile is built by calling a tile module under `modules/`, then the resulting `dashboard_tile`
-outputs are collected into a list and passed to this module:
+outputs are collected into a list and passed to the dashboard module:
 
 ```hcl
 module "full_logs" {
