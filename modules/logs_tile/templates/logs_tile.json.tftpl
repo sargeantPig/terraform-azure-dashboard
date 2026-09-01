@@ -1,0 +1,85 @@
+{
+  "position": ${dimensions},
+  "metadata": {
+    "inputs": [
+      {
+        "name": "resourceTypeMode",
+        "isOptional": true
+      },
+      {
+        "name": "ComponentId",
+        "isOptional": true
+      },
+      {
+        "name": "Scope",
+        "value": { "resourceIds": ["${log_analytics_workspace_id}"] },
+        "isOptional": true
+      },
+      {
+        "name": "Version",
+        "value": "2.0",
+        "isOptional": true
+      },
+      {
+        "name": "TimeRange",
+        "isOptional": true
+      },
+      {
+        "name": "DashboardId",
+        "isOptional": true
+      },
+      {
+        "name": "DraftRequestParameters",
+        "isOptional": true
+      },
+      {
+        "name": "Query",
+        "value": ${jsonencode(log_feed_query)},
+        "isOptional": true
+      },
+      {
+        "name": "ControlType",
+        "value": "AnalyticsGrid",
+        "isOptional": true
+      },
+      {
+        "name": "SpecificChart",
+        "isOptional": true
+      },
+      {
+        "name": "PartTitle",
+        "value": ${jsonencode(title)},
+        "isOptional": true
+      },
+      {
+        "name": "PartSubTitle",
+        "value": "${log_analytics_workspace_name}",
+        "isOptional": true
+      },
+      {
+        "name": "Dimensions",
+        "isOptional": true
+      },
+      {
+        "name": "LegendOptions",
+        "isOptional": true
+      },
+      {
+        "name": "IsQueryContainTimeRange",
+        "value": ${query_has_time_range},
+        "isOptional": true
+      }
+    ],
+    "type": "Extension/Microsoft_OperationsManagementSuite_Workspace/PartType/LogsDashboardPart",
+    "settings": {
+      "content": {
+        "GridColumnsWidth": {
+          "Level": "92px",
+          "LoggerName": "99px",
+          "Message": "165px"
+        },
+        "PartTitle": ${jsonencode(title)}
+      }
+    }
+  }
+}

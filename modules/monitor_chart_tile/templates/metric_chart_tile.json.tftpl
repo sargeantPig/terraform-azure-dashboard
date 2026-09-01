@@ -1,0 +1,73 @@
+{
+  "position": ${dimensions},
+  "metadata": {
+    "inputs": [
+      {
+        "name": "options",
+        "value": {
+          "chart": {
+            "metrics": [
+              {
+                "resourceMetadata": { "id": "${resource_id}" },
+                "name": "${metric_name}",
+                "aggregationType": ${aggregation_type},
+                "namespace": "${metric_namespace}",
+                "metricVisualization": { "displayName": "${display_name}" }
+              }
+            ],
+            "title": ${jsonencode(title)},
+            "titleKind": 1,
+            "visualization": {
+              "chartType": ${chart_type},
+              "legendVisualization": {
+                "isVisible": true,
+                "position": 2,
+                "hideHoverCard": false,
+                "hideLabelNames": true
+              },
+              "axisVisualization": {
+                "x": { "isVisible": true, "axisType": 2 },
+                "y": { "isVisible": true, "axisType": 1 }
+              }
+            }
+          }
+        },
+        "isOptional": true
+      }
+    ],
+    "type": "Extension/HubsExtension/PartType/MonitorChartPart",
+    "settings": {
+      "content": {
+        "options": {
+          "chart": {
+            "metrics": [
+              {
+                "resourceMetadata": { "id": "${resource_id}" },
+                "name": "${metric_name}",
+                "aggregationType": ${aggregation_type},
+                "namespace": "${metric_namespace}",
+                "metricVisualization": { "displayName": "${display_name}" }
+              }
+            ],
+            "title": ${jsonencode(title)},
+            "titleKind": 1,
+            "visualization": {
+              "chartType": ${chart_type},
+              "legendVisualization": {
+                "isVisible": true,
+                "position": 2,
+                "hideHoverCard": false,
+                "hideLabelNames": true
+              },
+              "axisVisualization": {
+                "x": { "isVisible": true, "axisType": 2 },
+                "y": { "isVisible": true, "axisType": 1 }
+              },
+              "disablePinning": true
+            }
+          }
+        }
+      }
+    }
+  }
+}
