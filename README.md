@@ -24,7 +24,7 @@ module "full_logs" {
 
 module "logs_ingestion_chart" {
   source           = "./modules/dashboard/modules/monitor_chart_tile"
-  resource_id      = azurerm_monitor_data_collection_rule.bog_bot_dcr.id
+  resource_id      = azurerm_monitor_data_collection_rule.example_dcr.id
   metric_name      = "BytesReceived_Count"
   metric_namespace = "microsoft.insights/datacollectionrules"
   display_name     = "Logs Ingestion Bytes per Min"
@@ -46,7 +46,7 @@ module "notes" {
 module "example_dashboard" {
   source               = "./modules/dashboard"
   dashboard_name        = "example_dashboard"
-  resource_group_name  = azurerm_resource_group.bog_bot.name
+  resource_group_name  = azurerm_resource_group.example.name
   location              = "uksouth"
 
   dashboard_parts = [
