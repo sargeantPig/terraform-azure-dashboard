@@ -106,6 +106,8 @@ Renders static markdown (`MarkdownPart`).
 | `resource_group_name` | Resource group to create it in |
 | `location` | Azure region |
 | `dashboard_parts` | List of `dashboard_tile` outputs from any of the tile modules above |
+| `default_time_range_hours` | Default relative time range for the dashboard's time picker, in hours (default `24`) |
+| `timezone` | Timezone for the dashboard's time range filter: `"local"` or `"utc"` (default `"utc"`) |
 | `tags` | Tags for the resource |
 
 | Output | Description |
