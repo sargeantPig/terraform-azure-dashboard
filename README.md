@@ -1,4 +1,4 @@
-# azdashboard
+# terraform-azure-dashboard
 
 Keeping a dashboard version controlled is usually a lot of faff. This module allows dashboards to be managed without having to deal directly with .tftpl templates.
 
