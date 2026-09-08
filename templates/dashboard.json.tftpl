@@ -5,5 +5,35 @@
       "parts": ${dashboard_parts}
     }
   },
-  "metadata": {}
+  "metadata": {
+    "model": {
+      "timeRange": {
+        "value": {
+          "relative": {
+            "duration": ${default_time_range_hours},
+            "timeUnit": 1
+          }
+        },
+        "type": "MsPortalFx.Composition.Configuration.ValueTypes.TimeRange"
+      },
+      "filterLocale": {
+        "value": "en-us"
+      },
+      "filters": {
+        "value": {
+          "MsPortalFx_TimeRange": {
+            "model": {
+              "format": "${timezone}",
+              "granularity": "auto",
+              "relative": "${time_range_relative}"
+            },
+            "displayCache": {
+              "name": "${timezone_display_name}",
+              "value": "${time_range_display}"
+            }
+          }
+        }
+      }
+    }
+  }
 }
